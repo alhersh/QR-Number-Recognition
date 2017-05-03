@@ -44,7 +44,7 @@ public class MainClass extends JFrame {
         setContentPane(contentPane);
         contentPane.setLayout(null);
   
-        new WebCamCaptThread().start();
+        new CamCaptThread().start();
     }
  
     VideoCap videoCap = new VideoCap();
@@ -55,7 +55,7 @@ public class MainClass extends JFrame {
         
     }
  
-    class WebCamCaptThread extends Thread{
+    class CamCaptThread extends Thread{
         @Override
         public void run() {
             for (;;){
