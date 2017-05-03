@@ -1,5 +1,5 @@
 /**
- * This is the main class for WebCam video capturing to detect and recognize QR Codes
+ * This is the main class for video capturing to detect and recognize QR Codes
  * 
  * @author Taha Alhersh
  * 
