@@ -19,9 +19,13 @@ The main class is MainClass to view the captured video bu caling the VideoCap me
 recognize and read the QR code in the image frame. So the Sequence of the classes as follow:
 
 MainClass
+
 ----------> VideoCap 
+
 ---------------------> Mat2Image 
+
 ---------------------------------> QRDetect 
+
 --------------------------------------------> Print the detected QR code in the console the 
 
 The method resposible of reading the QR-Code is (readQRCode(img, hintMap)) in the MatImage class which return String that can be used for further processing.
