@@ -11,5 +11,8 @@ http://opencv.org/
 
 OpenCV is used to capture the video and process it and use Zxing to recognize and decode the QR code.
 
+# How to use it
+
+
 # License
 Zxing and OpenCV licenses are provided
