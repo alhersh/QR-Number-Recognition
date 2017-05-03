@@ -18,7 +18,11 @@ This program assumes that you downloaded or built the previous 3 libraries from 
 The main class is MainClass to view the captured video bu caling the VideoCap method which uses OpenCV to capture the video as raw data after that call the Mat2Image class to convert the raw data to visible image frame and then fetch it to the QRDetect class to 
 recognize and read the QR code in the image frame. So the Sequence of the classes as follow:
 
-MainClass --> VideoCap --> Mat2Image --> QRDetect --> Print the detected QR code in the console the 
+MainClass
+----------> VideoCap 
+---------------------> Mat2Image 
+---------------------------------> QRDetect 
+--------------------------------------------> Print the detected QR code in the console the 
 
 The method resposible of reading the QR-Code is (readQRCode(img, hintMap)) in the MatImage class which return String that can be used for further processing.
 
