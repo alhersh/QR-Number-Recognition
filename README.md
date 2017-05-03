@@ -20,13 +20,13 @@ recognize and read the QR code in the image frame. So the Sequence of the classe
 
 MainClass
 
-----------> VideoCap 
+--------------> VideoCap 
 
----------------------> Mat2Image 
+--------------------------> Mat2Image 
 
----------------------------------> QRDetect 
+--------------------------------------> QRDetect 
 
---------------------------------------------> Print the detected QR code in the console the 
+-------------------------------------------------> Print the detected QR code in the console the 
 
 The method resposible of reading the QR-Code is (readQRCode(img, hintMap)) in the MatImage class which return String that can be used for further processing.
 
