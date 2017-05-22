@@ -25,7 +25,7 @@ MainClass
 
 --------------------------------------> QRDetect 
 
--------------------------------------------------> Print the detected QR code in the console the 
+-------------------------------------------------> Print the detected QR code with the corresponding frame number in the console
 
 The method resposible of reading the QR-Code is (readQRCode(img, hintMap)) in the MatImage class which return String that can be used for further processing.
 
