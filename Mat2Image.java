@@ -20,11 +20,15 @@ public class Mat2Image {
     BufferedImage img;
     byte[] dat;
     QRDetect qr = new QRDetect();
-	Map hintMap = new HashMap();
+    Map hintMap = new HashMap();
+    String str="";
+    public int frame_cntr;
 		
     public Mat2Image() {
+	    frame_cntr =0;
     }
     public Mat2Image(Mat mat) {
+	frame_cntr =0;
         getSpace(mat);
     }
     public void getSpace(Mat mat) {
@@ -49,8 +53,15 @@ public class Mat2Image {
             }
           
             img.getRaster().setDataElements(0, 0, mat.cols(), mat.rows(), dat);
+            //Printing the QR content and the number of frame
+            frame_cntr +=1;
             //Printing the QR content
-			System.out.println(qr.readQRCode(img, hintMap));
+            str = qr.readQRCode(img, hintMap);
+            if(str != null && !str.isEmpty())
+		// Print the content of the QR code and the correponding frame number
+            	System.out.println(str + " in Frame : " + frame_cntr);
+            else
+            	System.out.println("Frame : " + frame_cntr); // General tracking for fame number			
 
         return img;
     }
