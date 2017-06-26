@@ -1,5 +1,5 @@
 /**
- * This is the main class for video capturing to detect and recognize QR Codes
+ * This is the main class for WebCam video capturing to detect and recognize QR Codes
  * 
  * @author Taha Alhersh
  * 
@@ -9,6 +9,10 @@ import java.awt.Graphics;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
+
+import org.opencv.core.Point;
+import org.opencv.core.Scalar;
+import org.opencv.imgproc.Imgproc;
 
 
 public class MainClass extends JFrame {
@@ -50,6 +54,7 @@ public class MainClass extends JFrame {
     VideoCap videoCap = new VideoCap();
 	
     public void paint(Graphics g){
+    	
         g = contentPane.getGraphics();
         g.drawImage(videoCap.getOneFrame(), 0, 0, this);
         

@@ -17,7 +17,7 @@ import com.google.zxing.common.HybridBinarizer;
 public class QRDetect {
 	
 	public static String readQRCode(BufferedImage bufImg, Map hintMap) {
-		
+
 		try{
 			BinaryBitmap binaryBitmap = new BinaryBitmap(new HybridBinarizer( new BufferedImageLuminanceSource(bufImg)));
 			Result qrCodeResult = new MultiFormatReader().decode(binaryBitmap, hintMap);
