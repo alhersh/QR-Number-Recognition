@@ -25,9 +25,14 @@ MainClass
 
 --------------------------------------> QRDetect 
 
+
+--------------------------------------> QRSelect 
+
 -------------------------------------------------> Print the detected QR code with the corresponding frame number in the console
 
 The method resposible of reading the QR-Code is (readQRCode(img, hintMap)) in the MatImage class which return String that can be used for further processing.
+
+The class Mat2Image has the method "setQRCode("QR-Code")" which is responsible of setting a QR code to track. The passed QR code will be used by the method selectRQ from the QRSelect class to track only the desired QR code. The class Mat2Image will draw a green box on the desired QR code.
 
 # License
 Zxing and OpenCV licenses are provided
