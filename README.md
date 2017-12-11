@@ -15,11 +15,11 @@ OpenCV is used to capture the video and process it and use Zxing to recognize an
 
 # Number-Recognition
 For number recognition, this project will be using Tesseract-OCR libraries:
--- tesseract 3.04.01
+--tesseract 3.04.01
 https://github.com/tesseract-ocr/tesseract/releases
 
 Which is based on and compliled with Leptonica libraries:
--- leptonica-1.74.4
+--leptonica-1.74.4
 http://www.leptonica.org/download.html
 
 
