@@ -11,6 +11,18 @@ http://opencv.org/
 
 OpenCV is used to capture the video and process it and use Zxing to recognize and decode the QR code.
 
+# Contour Anlaysis is used for number detection
+
+# Number-Recognition
+For number recognition, this project will be using Tesseract-OCR libraries:
+-- tesseract 3.04.01
+https://github.com/tesseract-ocr/tesseract/releases
+
+Which is based on and compliled with Leptonica libraries:
+-- leptonica-1.74.4
+http://www.leptonica.org/download.html
+
+
 # How to use it
 
 This program assumes that you downloaded or built the previous 3 libraries from Zxing and OpenCV.
