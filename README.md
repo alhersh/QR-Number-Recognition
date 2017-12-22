@@ -1,5 +1,5 @@
 # QR-Reader
-This project detect and recognize QR codes using the following libraries:
+This part of the project detect and recognize QR codes using the following libraries:
 
 https://github.com/zxing/zxing
 
