@@ -30,6 +30,7 @@ public class MainClass extends JFrame {
                 try {
                     MainClass frame = new MainClass();
                     frame.setVisible(true);
+
                 } catch (Exception e) {
                     e.printStackTrace();
                 }
@@ -49,8 +50,11 @@ public class MainClass extends JFrame {
         contentPane.setLayout(null);
   
         new CamCaptThread().start();
+     
     }
- 
+
+
+    
     VideoCap videoCap = new VideoCap();
 	
     public void paint(Graphics g){
@@ -69,5 +73,7 @@ public class MainClass extends JFrame {
                 } catch (InterruptedException e) {    }
             }  
         } 
-    }
+    }//CamCaptThread
+    
+
 }
