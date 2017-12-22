@@ -12,6 +12,7 @@ http://opencv.org/
 OpenCV is used to capture the video and process it and use Zxing to recognize and decode the QR code.
 
 # Contour Anlaysis is used for number detection
+Contour detction was used to extract the suitable contours and then pass it to Tesseract to read the contents (Row number)
 
 # Number-Recognition
 For number recognition, this project will be using Tesseract-OCR libraries:
@@ -31,13 +32,19 @@ http://www.leptonica.org/download.html
 
 This program assumes that you downloaded or built the previous 3 libraries from Zxing and OpenCV.
 
-The main class is MainClass to view the captured video by caling the VideoCap method which uses OpenCV to capture the video as raw data, after that VideoCap will call the Mat2Image class to convert the raw data to visible image frame and then fetch it to the QRDetect class to recognize and read the QR code in the image frame. So the Sequence of the classes as follow:
+The main class is MainClass to view the captured video by caling the VideoCap method which uses OpenCV to capture the video as raw data, after that VideoCap will call the Mat2Image class to convert the raw data to visible image frame and then fetch it to the QRDetect and Contour classes to recognize and read the QR code or Row number in the image frame. So the Sequence of the classes as follow:
 
 MainClass
 
 --------------> VideoCap 
 
 --------------------------> Mat2Image 
+
+--------------------------------------> Contour 
+
+-------------------------------------------------> readContour
+
+-----------------------------------------------------------> Print the detected number with the corresponding frame number in the console
 
 --------------------------------------> QRDetect 
 
@@ -48,7 +55,18 @@ MainClass
 
 The method resposible of reading the QR-Code is (readQRCode(img, hintMap)) in the MatImage class which return String that can be used for further processing.
 
-The class Mat2Image has the method "setQRCode("QR-Code")" which is responsible of setting a QR code to track. The passed QR code will be used by the method selectRQ from the QRSelect class to track only the desired QR code. The class Mat2Image will draw a green box on the desired QR code.
+The class resposible of reading the Row-Number is readContour class which return String via readContourNumber method that can be used for further processing.
+
+The class Mat2Image has the following methods which are responsible of setting a QR code or Row number to detect. The passed QR code / Row number will be used by other methods and classes to track and read only the desired QR code / Row number. The class Mat2Image will draw a green box on the desired QR code and Red box around the desired Row numbe:
+
+----setQRCode
+
+----setRowno
+
+----setRowFlag
+
+----setQrFlag
+
 
 # License
-Zxing and OpenCV licenses are provided
+Tesseract, Zxing and OpenCV licenses are provided
