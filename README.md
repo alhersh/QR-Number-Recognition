@@ -27,10 +27,6 @@ Which is based on and compliled with Leptonica libraries:
 
 http://www.leptonica.org/download.html
 
-# An example of the recognized number captured from webcam
-
-<image src="No.png" width = 100>
-
 # How to use it
 
 This program assumes that you downloaded or built the previous 3 libraries from Zxing and OpenCV.
@@ -70,6 +66,11 @@ The class Mat2Image has the following methods which are responsible of setting a
 
 ----setQrFlag
 
-
+# Output examples
+## Numbers recognition
+<image src="No.png">
+  
+ ## QR recognition
+<image src="QR.png">
 # License
 Tesseract, Zxing and OpenCV licenses are provided
