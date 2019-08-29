@@ -27,6 +27,9 @@ Which is based on and compliled with Leptonica libraries:
 
 http://www.leptonica.org/download.html
 
+# An example of the recognized numer from webcam is the follow:
+
+<image src="No.png">
 
 # How to use it
 
